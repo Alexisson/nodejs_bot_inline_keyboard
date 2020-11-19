@@ -36,6 +36,10 @@ bot.on('message',msg=>{
                 ]
             }
 
-        })
-    
+        }) 
+})
+
+bot.on('callback_query', query=>{
+    // bot.sendMessage(query.message.chat.id)
+    bot.answerCallbackQuery(query.id,`${query.data}`)
 })
